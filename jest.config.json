@@ -1,0 +1,10 @@
+{
+    "setupFiles": [
+        "raf/polyfill",
+        "<rootDir>/tests/setupTests.js"
+    ],
+    "snapshotSerializers": [
+        "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": ["**/*.{js,jsx}", "!**/coverage/**", "!**/migrations/**",  "!webpack.config.js", "!src/app.js", "!server/server.js", "!**/node_modules/**", "!**/public/**"]
+}

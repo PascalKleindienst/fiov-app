@@ -5,9 +5,11 @@ import ajax from 'fetchival';
 import AppRouter, { history } from './routers/AppRouter';
 import LoadingPage from './components/LoadingPage';
 import configureStore from './store/configureStore';
+import configureLanguageStore from './store/configureLanguageStore';
 import { login, logout } from './actions/auth';
 
 export const store = configureStore();
+configureLanguageStore(store);
 
 // Page Template
 const jsx = (

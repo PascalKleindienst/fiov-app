@@ -8,8 +8,8 @@ import configureStore from './store/configureStore';
 import configureLanguageStore from './store/configureLanguageStore';
 import { login, logout } from './actions/auth';
 
-export const store = configureStore();
-configureLanguageStore(store);
+// export store
+export const store = configureLanguageStore(configureStore());
 
 // Page Template
 const jsx = (

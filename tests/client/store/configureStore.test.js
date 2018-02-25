@@ -13,4 +13,8 @@ describe('my store', () => {
     test('should contain auth reducer', () => {
         expect(store.getState()).toHaveProperty('auth');
     });
+
+    test('should contain locale reducer', () => {
+        expect(store.getState()).toHaveProperty('locale');
+    });
 });

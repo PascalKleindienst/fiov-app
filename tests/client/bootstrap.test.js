@@ -12,15 +12,10 @@ jest.mock('react-dom', (jsx, el) => ({
 import React from 'react';
 import { history } from '../../src/routers/AppRouter';
 import renderLoadingPage, { store, renderApp, authenticatedView } from '../../src/bootstrap';
-import configureStore from '../../src/store/configureStore';
 import LoadingPage from '../../src/components/LoadingPage';
 
 
 describe('my bootstrap setup', () => {
-
-    test('should export store', () => {
-        expect(store.getState()).toEqual(configureStore().getState());
-    });
 
     test('should render app only once', () => {
         document.body.innerHTML = '<div id="app"></div>';
@@ -54,7 +49,7 @@ describe('my bootstrap setup', () => {
 
         // Test
         authenticatedView().then((user) => {
-            expect(store.getState()).toEqual({ auth: user });
+            expect(store.getState()).toHaveProperty('auth', user);
             expect(history.push).toHaveBeenCalledWith('/dashboard');
             done();
         });
@@ -75,7 +70,7 @@ describe('my bootstrap setup', () => {
 
         // Test
         authenticatedView().then((user) => {
-            expect(store.getState()).toEqual({ auth: user });
+            expect(store.getState()).toHaveProperty('auth', user);
             expect(history.push).not.toHaveBeenCalledWith('/dashboard');
             done();
         });
@@ -92,7 +87,7 @@ describe('my bootstrap setup', () => {
 
         // check result
         authenticatedView().then(() => {
-            expect(store.getState()).toEqual({ auth: {} });
+            expect(store.getState()).toHaveProperty('auth', {});
             expect(history.push).toHaveBeenCalledWith('/');
             done();
         });

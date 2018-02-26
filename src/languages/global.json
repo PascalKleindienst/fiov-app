@@ -1,10 +1,14 @@
 {
-    "title": [
-        "Fiov App",
-        "Fiov App"
-    ],
-    "subtitle": [
-        "Your Financial Transactions Overview",
-        "Deine Übersicht deiner finanziellen Transaktionen"
-    ]
+    "title": [ "Fiov App", "Fiov App" ],
+    "subtitle": [ "Your Financial Transactions Overview", "Deine Übersicht deiner finanziellen Transaktionen" ],
+
+    "twitterLogin": [ "Login with Twitter", "Login mit Twitter" ],
+    "googleLogin": [ "Login with Google", "Login mit Google" ],
+    "facebookLogin": [ "Login with Facebook", "Login mit Facebook" ],
+
+    "user": {
+        "account": ["Account", "Konto"],
+        "profile": ["Profile", "Profil"],
+        "logout": ["Logout", "Logout"]
+    }
 }

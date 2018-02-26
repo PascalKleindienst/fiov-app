@@ -2,23 +2,30 @@
 // LOGIN PAGE COMPONENT =========================
 // ==============================================
 import React from 'react';
+import PropTypes from 'prop-types';
+import { localize } from 'react-localize-redux';
 
-const LoginPage = () => (
+export const LoginPage = ({ translate }) => (
     <div className="box-layout">
         <div className="box-layout__box">
-            <h1 className="box-layout__title">Boilderplate</h1>
-            <p>Tagline for App</p>
+            <h1 className="box-layout__title">{ translate('title') }</h1>
+            <p>{ translate('subtitle') }</p>
             <p>
-                <a className="button" href="/auth/twitter">Login with Twitter</a>
+                <a className="button" href="/auth/twitter">{ translate('twitterLogin') }</a>
             </p>
             <p>
-                <a className="button" href="/auth/facebook">Login with Facebook</a>
+                <a className="button" href="/auth/facebook">{ translate('facebookLogin') }</a>
             </p>
             <p>
-                <a className="button" href="/auth/google">Login with Google</a>
+                <a className="button" href="/auth/google">{ translate('googleLogin') }</a>
             </p>
         </div>
     </div>
 );
 
-export default LoginPage;
+// PropTypes
+LoginPage.propTypes = {
+    translate: PropTypes.func.isRequired
+};
+
+export default localize(LoginPage, 'locale');

@@ -3,11 +3,11 @@
 // ==============================================
 import React from 'react';
 import { shallow } from 'enzyme';
-import LoginPage from '../../../src/components/LoginPage';
+import { LoginPage } from '../../../src/components/LoginPage';
 
 describe('my Login page component', () => {
     test('should render correctly', () => {
-        const wrapper = shallow(<LoginPage />);
+        const wrapper = shallow(<LoginPage translate={ (msg) => msg } />);
         expect(wrapper).toMatchSnapshot();
     });
 });

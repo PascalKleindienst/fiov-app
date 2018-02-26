@@ -10,17 +10,17 @@ exports[`my Login page component should render correctly 1`] = `
     <h1
       className="box-layout__title"
     >
-      Boilderplate
+      title
     </h1>
     <p>
-      Tagline for App
+      subtitle
     </p>
     <p>
       <a
         className="button"
         href="/auth/twitter"
       >
-        Login with Twitter
+        twitterLogin
       </a>
     </p>
     <p>
@@ -28,7 +28,7 @@ exports[`my Login page component should render correctly 1`] = `
         className="button"
         href="/auth/facebook"
       >
-        Login with Facebook
+        facebookLogin
       </a>
     </p>
     <p>
@@ -36,7 +36,7 @@ exports[`my Login page component should render correctly 1`] = `
         className="button"
         href="/auth/google"
       >
-        Login with Google
+        googleLogin
       </a>
     </p>
   </div>

@@ -5,27 +5,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { getTranslate } from 'react-localize-redux';
 import { logout } from '../actions/auth';
 
 // Header Component
-export const Header = ({ auth, logout }) => (
+export const Header = ({ auth, logout, translate }) => (
     <header className="header">
         <div className="content-container">
             <div className="header__content">
                 <Link className="header__title" to="/dashboard">
-                    <h1>Boilerplate</h1>
+                    <h1>{ translate('title') }</h1>
                 </Link>
                 <div className="profile has-dropdown">
                     <img src={ auth.picture } alt="" className="profile__picture" />
                     <div className="dropdown-menu">
                         <div className="dropdown-menu__header">
-                            <strong>Account</strong>
+                            <strong>{ translate('user.account') }</strong>
                         </div>
                         <Link className="dropdown-menu__item" to="/profile">
-                            Profile
+                            { translate('user.profile') }
                         </Link>
                         <Link className="dropdown-menu__item logout" onClick={logout} to="#">
-                            Logout
+                            { translate('user.logout') }
                         </Link>
                     </div>
                 </div>
@@ -39,12 +40,14 @@ Header.propTypes = {
     auth: PropTypes.shape({
         picture: PropTypes.string.isRequired,
     }),
-    logout: PropTypes.func.isRequired
+    logout: PropTypes.func.isRequired,
+    translate: PropTypes.func.isRequired
 };
 
 // States
 const mapStateToProps = (state) => ({
-    auth: state.auth
+    auth: state.auth,
+    translate: getTranslate(state.locale)
 });
 
 // Dispatch Functions

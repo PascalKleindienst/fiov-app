@@ -16,7 +16,7 @@ exports[`my header component should render correctly 1`] = `
         to="/dashboard"
       >
         <h1>
-          Boilerplate
+          title
         </h1>
       </Link>
       <div
@@ -34,7 +34,7 @@ exports[`my header component should render correctly 1`] = `
             className="dropdown-menu__header"
           >
             <strong>
-              Account
+              user.account
             </strong>
           </div>
           <Link
@@ -42,7 +42,7 @@ exports[`my header component should render correctly 1`] = `
             replace={false}
             to="/profile"
           >
-            Profile
+            user.profile
           </Link>
           <Link
             className="dropdown-menu__item logout"
@@ -50,7 +50,7 @@ exports[`my header component should render correctly 1`] = `
             replace={false}
             to="#"
           >
-            Logout
+            user.logout
           </Link>
         </div>
       </div>

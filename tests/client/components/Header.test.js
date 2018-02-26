@@ -26,20 +26,21 @@ describe('my header component', () => {
         }));
 
         store = mockStore({
-            auth: { picture: 'foo.png' }
+            auth: { picture: 'foo.png' },
+            locale: { languages: ['en'] }
         });
         
         wrapper = shallow(<HeaderContainer store={store} />);
     });
 
     test('should render correctly', () => {
-        const wrapper = shallow(<Header logout={() => {}} auth={ {picture: 'foo.png'} } />);
+        const wrapper = shallow(<Header logout={() => {}} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } />);
         expect(wrapper).toMatchSnapshot();
     });
     
     test('should call logout on button click', () => {
         const logout = jest.fn();
-        const wrapper = shallow(<Header logout={logout} auth={ {picture: 'foo.png'} } />);
+        const wrapper = shallow(<Header logout={logout} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } />);
         
         wrapper.find('.logout').simulate('click');
         expect(logout).toHaveBeenCalled();

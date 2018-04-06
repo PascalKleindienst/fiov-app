@@ -10,5 +10,11 @@
         "account": ["Account", "Konto"],
         "profile": ["Profile", "Profil"],
         "logout": ["Logout", "Logout"]
+    },
+
+    "menu": {
+        "login": ["Login", "Einloggen"],
+        "imprint": ["Imprint", "Impressum"],
+        "privacy": ["Privacy", "Datenschutz"]
     }
 }

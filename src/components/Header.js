@@ -9,28 +9,39 @@ import { getTranslate } from 'react-localize-redux';
 import { logout } from '../actions/auth';
 
 // Header Component
-export const Header = ({ auth, logout, translate }) => (
+export const Header = ({ auth, isAuthenticated, logout, translate }) => (
     <header className="header">
         <div className="content-container">
-            <div className="header__content">
-                <Link className="header__title" to="/dashboard">
-                    <h1>{ translate('title') }</h1>
-                </Link>
-                <div className="profile has-dropdown">
-                    <img src={ auth.picture } alt="" className="profile__picture" />
-                    <div className="dropdown-menu">
-                        <div className="dropdown-menu__header">
-                            <strong>{ translate('user.account') }</strong>
+            { isAuthenticated ? (
+                <div className="header__content">
+                    <Link className="header__title" to="/dashboard">
+                        <h1>{ translate('title') }</h1>
+                    </Link>
+                    <div className="profile has-dropdown">
+                        <img src={ auth.picture } alt="" className="profile__picture" />
+                        <div className="dropdown-menu">
+                            <div className="dropdown-menu__header">
+                                <strong>{ translate('user.account') }</strong>
+                            </div>
+                            <Link className="dropdown-menu__item" to="/profile">
+                                { translate('user.profile') }
+                            </Link>
+                            <Link className="dropdown-menu__item logout" onClick={logout} to="#">
+                                { translate('user.logout') }
+                            </Link>
                         </div>
-                        <Link className="dropdown-menu__item" to="/profile">
-                            { translate('user.profile') }
-                        </Link>
-                        <Link className="dropdown-menu__item logout" onClick={logout} to="#">
-                            { translate('user.logout') }
-                        </Link>
                     </div>
                 </div>
-            </div>
+            ) : (
+                <div className="header__content">
+                    <Link className="header__title" to="/">
+                        <h1>{ translate('title') }</h1>
+                    </Link>
+                    <div className="header__nav">
+                        <Link to="/login">{ translate('menu.login') }</Link>
+                    </div>
+                </div>
+            )}
         </div>
     </header>
 );
@@ -38,8 +49,9 @@ export const Header = ({ auth, logout, translate }) => (
 // PropTypes
 Header.propTypes = {
     auth: PropTypes.shape({
-        picture: PropTypes.string.isRequired,
+        picture: PropTypes.string,
     }),
+    isAuthenticated: PropTypes.bool.isRequired,
     logout: PropTypes.func.isRequired,
     translate: PropTypes.func.isRequired
 };
@@ -47,6 +59,7 @@ Header.propTypes = {
 // States
 const mapStateToProps = (state) => ({
     auth: state.auth,
+    isAuthenticated: !!state.auth.id,
     translate: getTranslate(state.locale)
 });
 

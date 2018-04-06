@@ -13,10 +13,11 @@
     text-decoration: none;
     background: $light-green;
     border: 0;
-    transition: background .3s ease;
+    transition: background .3s ease, color .3s ease;
 
     &:hover {
         background: darken($light-green, 5%);
+        color: $dark-grey;
     }
 }
 

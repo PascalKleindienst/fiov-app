@@ -1,0 +1,45 @@
+// ==============================================
+// FOOTER =======================================
+// ==============================================
+.footer {
+    background: $dark-grey;
+
+    &__content {
+        padding: 2rem 0;
+    }
+
+    a {
+        margin-right: $s-size;
+        font-size: $font-size-small;
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $off-white;
+        }
+    }
+
+    .scroll-top {
+        display: flex;
+        float: right;
+        width: 25px;
+        height: 25px;
+        padding-left: .35rem;
+        font-size: 3rem;
+        color: $off-white;
+        text-align: center;
+        cursor: pointer;
+        background: $grey;
+        border-radius: 50%;
+        opacity: .5;
+        transition: opacity .33s ease-in-out;
+
+        &::after {
+            margin-left: -1rem;
+            content: '\00BB';
+            transform: rotate(-90deg);
+        }
+
+        &:hover { opacity: .75;}
+    }
+}

@@ -24,4 +24,6 @@ button {
     }
 }
 
+a { transition: color .25s ease-in; }
+
 .is-active { font-weight: bold; }

@@ -33,14 +33,19 @@ describe('my header component', () => {
         wrapper = shallow(<HeaderContainer store={store} />);
     });
 
-    test('should render correctly', () => {
-        const wrapper = shallow(<Header logout={() => {}} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } />);
+    test('should render correctly when authenticated', () => {
+        const wrapper = shallow(<Header logout={() => {}} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } isAuthenticated={true} />);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    test('should render correctly when NOT authenticated', () => {
+        const wrapper = shallow(<Header logout={() => {}} translate={ (msg) => msg } isAuthenticated={false} />);
         expect(wrapper).toMatchSnapshot();
     });
     
     test('should call logout on button click', () => {
         const logout = jest.fn();
-        const wrapper = shallow(<Header logout={logout} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } />);
+        const wrapper = shallow(<Header logout={logout} auth={ {picture: 'foo.png'} } translate={ (msg) => msg } isAuthenticated={true} />);
         
         wrapper.find('.logout').simulate('click');
         expect(logout).toHaveBeenCalled();

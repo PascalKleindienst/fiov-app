@@ -23,21 +23,23 @@ exports[`my AppRouter should render correctly 1`] = `
     }
   }
 >
-  <div>
-    <Switch>
-      <Connect(PublicRoute)
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Connect(PrivateRoute)
-        component={[Function]}
-        path="/dashboard"
-      />
-      <Route
-        component={[Function]}
-      />
-    </Switch>
-  </div>
+  <Switch>
+    <Connect(PublicRoute)
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Connect(PublicRoute)
+      component={[Function]}
+      path="/login"
+    />
+    <Connect(PrivateRoute)
+      component={[Function]}
+      path="/dashboard"
+    />
+    <Route
+      component={[Function]}
+    />
+  </Switch>
 </Router>
 `;

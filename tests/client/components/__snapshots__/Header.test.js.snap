@@ -1,6 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`my header component should render correctly 1`] = `
+exports[`my header component should render correctly when NOT authenticated 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <Link
+        className="header__title"
+        replace={false}
+        to="/"
+      >
+        <h1>
+          title
+        </h1>
+      </Link>
+      <div
+        className="header__nav"
+      >
+        <Link
+          replace={false}
+          to="/login"
+        >
+          menu.login
+        </Link>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`my header component should render correctly when authenticated 1`] = `
 <header
   className="header"
 >

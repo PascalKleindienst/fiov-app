@@ -17,9 +17,17 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: DataTypes.DATE
     }, {});
 
-    // User.associate = (models) => {
-        // associations can be defined here
-    // };
+    User.associate = (models) => {
+        User.hasMany(models.Transactions, {
+            foreignKey: 'user_id',
+            as: 'transactions',
+        });
+
+        User.hasMany(models.Categories, {
+            foreignKey: 'user_id',
+            as: 'categories',
+        });
+    };
 
     return User;
 };

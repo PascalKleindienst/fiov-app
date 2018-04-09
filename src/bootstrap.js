@@ -7,6 +7,7 @@ import LoadingPage from './components/LoadingPage';
 import configureStore from './store/configureStore';
 import configureLanguageStore from './store/configureLanguageStore';
 import { login, logout } from './actions/auth';
+import { setTransactions } from './actions/transactions';
 
 // export store
 export const store = configureLanguageStore(configureStore());
@@ -36,10 +37,12 @@ export const authenticatedView = () => {
             history.push('/');
         } else {
             store.dispatch(login(json));
-            renderApp();
-            if (history.location.pathname === '/') {
-                history.push('/dashboard');
-            }
+            store.dispatch(setTransactions()).then(() => {
+                renderApp();
+                if (history.location.pathname === '/') {
+                    history.push('/dashboard');
+                }
+            });
         }
         
         return json;

@@ -17,4 +17,8 @@ describe('my store', () => {
     test('should contain locale reducer', () => {
         expect(store.getState()).toHaveProperty('locale');
     });
+
+    test('should contain transactions reducer', () => {
+        expect(store.getState()).toHaveProperty('transactions');
+    });
 });

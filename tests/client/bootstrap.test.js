@@ -48,11 +48,15 @@ describe('my bootstrap setup', () => {
         }));
 
         // Test
-        authenticatedView().then((user) => {
-            expect(store.getState()).toHaveProperty('auth', user);
-            expect(history.push).toHaveBeenCalledWith('/dashboard');
-            done();
-        });
+        authenticatedView()
+            .then((user) => { // Load User Auth
+                expect(store.getState()).toHaveProperty('auth', user);
+            })
+            .then(() => { // Load Transactions and redirect to dashboard
+                expect(store.getState()).toHaveProperty('transactions');
+                expect(history.push).toHaveBeenCalledWith('/dashboard');
+                done();
+            });
     });
 
     test('should render authenticated view without redirect', (done) => {
@@ -69,11 +73,14 @@ describe('my bootstrap setup', () => {
         }));
 
         // Test
-        authenticatedView().then((user) => {
-            expect(store.getState()).toHaveProperty('auth', user);
-            expect(history.push).not.toHaveBeenCalledWith('/dashboard');
-            done();
-        });
+        authenticatedView()
+            .then((user) => {
+                expect(store.getState()).toHaveProperty('auth', user);
+            })
+            .then(() => {
+                expect(history.push).not.toHaveBeenCalledWith('/dashboard');
+                done();
+            });
     });
 
     test('should not render authenticated view', (done) => {

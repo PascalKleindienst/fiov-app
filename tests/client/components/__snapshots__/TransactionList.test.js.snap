@@ -65,7 +65,7 @@ exports[`my transaction list component should render correctly for transactions 
   >
     <TransactionListItem
       amount={-199}
-      createdAt="1970-01-01T01:00:00+01:00"
+      createdAt="1970 01 01"
       description="Gum"
       id={1}
       key="1"
@@ -73,7 +73,7 @@ exports[`my transaction list component should render correctly for transactions 
     />
     <TransactionListItem
       amount={-109500}
-      createdAt="1969-12-28T01:00:00+01:00"
+      createdAt="1969 12 28"
       description="Rent"
       id={2}
       key="2"
@@ -81,7 +81,7 @@ exports[`my transaction list component should render correctly for transactions 
     />
     <TransactionListItem
       amount={4500}
-      createdAt="1970-01-05T01:00:00+01:00"
+      createdAt="1970 01 05"
       description="Credit Card"
       id={3}
       key="3"

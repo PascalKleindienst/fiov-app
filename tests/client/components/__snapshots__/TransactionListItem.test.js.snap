@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my transaction list item component should render correctly 1`] = `
+<Link
+  className="list-item"
+  replace={false}
+  to="/edit/123"
+>
+  <div>
+    <h3
+      className="list-item__title"
+    >
+      Some Desc
+    </h3>
+    <span
+      className="list-item__sub-title"
+    >
+      January 1, 2018
+    </span>
+  </div>
+  <h3
+    className="list-item__data"
+  >
+    1,234.56$
+  </h3>
+</Link>
+`;
+
+exports[`my transaction list item component should render correctly for expenses 1`] = `
+<Link
+  className="list-item list-item--expense"
+  replace={false}
+  to="/edit/123"
+>
+  <div>
+    <h3
+      className="list-item__title"
+    >
+      Some Desc
+    </h3>
+    <span
+      className="list-item__sub-title"
+    >
+      January 1, 2018
+    </span>
+  </div>
+  <h3
+    className="list-item__data"
+  >
+    -1,234.56$
+  </h3>
+</Link>
+`;

@@ -2,10 +2,11 @@
 // DASHBOARD PAGE COMPONENT =====================
 // ==============================================
 import React from 'react';
+import TransactionList from './TransactionList';
 
 const DashboardPage = () => (
     <div>
-        Dashboard page content
+        <TransactionList />
     </div>
 );
 

@@ -16,5 +16,12 @@
         "login": ["Login", "Einloggen"],
         "imprint": ["Imprint", "Impressum"],
         "privacy": ["Privacy", "Datenschutz"]
+    },
+
+    "transactions": {
+        "transactions": ["Transactions", "Transaktionen"],
+        "transaction": ["Transaction", "Transaktion"],
+        "amount": ["Amount", "Betrag"],
+        "no_transactions": ["No Transactions available", "Keine Transaktionen vorhanden"]
     }
 }

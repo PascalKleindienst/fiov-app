@@ -2,6 +2,6 @@
 
 exports[`my dashboard page component should render correctly 1`] = `
 <div>
-  Dashboard page content
+  <Connect(TransactionList) />
 </div>
 `;

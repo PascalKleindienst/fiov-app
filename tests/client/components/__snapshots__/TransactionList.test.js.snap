@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my transaction list component should render correctly for no transactions 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-mobile"
+    >
+      transactions.transactions
+    </div>
+    <div
+      className="show-desktop"
+    >
+      transactions.transaction
+    </div>
+    <div
+      className="show-desktop"
+    >
+      transactions.amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        transactions.no_transactions
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`my transaction list component should render correctly for transactions 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-mobile"
+    >
+      transactions.transactions
+    </div>
+    <div
+      className="show-desktop"
+    >
+      transactions.transaction
+    </div>
+    <div
+      className="show-desktop"
+    >
+      transactions.amount
+    </div>
+  </div>
+  <div
+    className="list-body"
+  >
+    <TransactionListItem
+      amount={-199}
+      createdAt="1970-01-01T01:00:00+01:00"
+      description="Gum"
+      id={1}
+      key="1"
+      note=""
+    />
+    <TransactionListItem
+      amount={-109500}
+      createdAt="1969-12-28T01:00:00+01:00"
+      description="Rent"
+      id={2}
+      key="2"
+      note=""
+    />
+    <TransactionListItem
+      amount={4500}
+      createdAt="1970-01-05T01:00:00+01:00"
+      description="Credit Card"
+      id={3}
+      key="3"
+      note=""
+    />
+  </div>
+</div>
+`;

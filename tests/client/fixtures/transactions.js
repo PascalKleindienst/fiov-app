@@ -1,21 +1,21 @@
 import moment from 'moment';
 
 export default [{
-    id: '1',
+    id: 1,
     description: 'Gum',
     note: '',
     amount: -199,
-    createdAt: 0
+    createdAt: moment(0).format()
 }, {
-    id: '2',
+    id: 2,
     description: 'Rent',
     note: '',
     amount: -109500,
-    createdAt: moment(0).subtract(4, 'days').valueOf()
+    createdAt: moment(0).subtract(4, 'days').format()
 }, {
-    id: '3',
+    id: 3,
     description: 'Credit Card',
     note: '',
     amount: 4500,
-    createdAt: moment(0).add(4, 'days').valueOf()
+    createdAt: moment(0).add(4, 'days').format()
 }];

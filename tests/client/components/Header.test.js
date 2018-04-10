@@ -2,6 +2,7 @@
 // HEADER PAGE TEST =============================
 // ==============================================
 // Mocks
+const helpers = require('../../helpers');
 import ajax from 'fetchival';
 jest.mock('fetchival');
 
@@ -19,11 +20,7 @@ describe('my header component', () => {
     let wrapper, store;
 
     beforeEach(() => {
-        ajax.mockImplementation(() => ({
-            get: jest.fn(() => new Promise((resolve, reject) => {
-                resolve({ id: 1 });
-            }))
-        }));
+        ajax.mockImplementation(() => ({ get: helpers.resolvePromise({ id: 1 }) }));
 
         store = mockStore({
             auth: { picture: 'foo.png' },

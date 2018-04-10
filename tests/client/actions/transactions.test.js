@@ -2,6 +2,7 @@
 // TRANSACTIONS ACTION TEST =====================
 // ==============================================
 // Mocks
+const helpers = require('../../helpers');
 import ajax from 'fetchival';
 jest.mock('fetchival');
 
@@ -16,11 +17,7 @@ const createMockStore = configureMockStore([thunk]);
 describe('my transactions action', () => {
     test('should setup transactions fetched from server', () => {
         const store = createMockStore({});
-        ajax.mockImplementation(() => ({
-            get: jest.fn(() => new Promise((resolve, reject) => {
-                resolve(transactions);
-            }))
-        }));
+        ajax.mockImplementation(() => ({ get: helpers.resolvePromise(transactions) }));
 
         store.dispatch(setTransactions()).then(() => {
             const actions = store.getActions();

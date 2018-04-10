@@ -2,6 +2,7 @@
 // AUTH ACTION TEST =============================
 // ==============================================
 // Mocks
+const helpers = require('../../helpers');
 import ajax from 'fetchival';
 jest.mock('fetchival');
 
@@ -22,11 +23,7 @@ describe('my auth action', () => {
     };
 
     test('should generate login action object', () => {
-        ajax.mockImplementation(() => ({
-            get: jest.fn(() => new Promise((resolve, reject) => {
-                resolve(user);
-            }))
-        }));
+        ajax.mockImplementation(() => ({ get: helpers.resolvePromise(user) }));
 
         expect(login(user)).toEqual({
             type: LOGIN,

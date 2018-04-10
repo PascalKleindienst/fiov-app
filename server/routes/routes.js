@@ -6,15 +6,12 @@ module.exports = (app, publicPath) => {
     const isAuthenticated = (req,res,next) => req.isAuthenticated() ? next() : res.redirect('/');
     
     app.use('/api', isAuthenticated);
-    app.get('/api/transactions', (req, res) => {
-        // app.locals.models.Transactions.findAndCountAll({
-        app.locals.models.Transactions.findAll({
-            where: { user_id: req.user.id },
-            include: ['category']
-        }).then( (transactions) => {
-            res.json(transactions);
-        });
-    });
+
+    // =============== Transactions ===============
+    const TransactionsController = require('../controllers/transactions');
+    app.route('/api/transactions')
+        .get(TransactionsController.list_all_transactions)
+        .post(TransactionsController.create_transaction);
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(publicPath, 'index.html'));

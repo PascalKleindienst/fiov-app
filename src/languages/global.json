@@ -23,6 +23,14 @@
         "transaction": ["Transaction", "Transaktion"],
         "amount": ["Amount", "Betrag"],
         "no_transactions": ["No Transactions available", "Keine Transaktionen vorhanden"],
-        "add_transaction": ["Add Transaction", "Transaktion Hinzufügen"]
+        "add_transaction": ["Add Transaction", "Transaktion Hinzufügen"],
+
+        "form": {
+            "description": ["Description", "Beschreibung"],
+            "amount": ["Amount", "Betrag"],
+            "note": ["Add a note for your transaction (optional)", "Fügen Sie eine Notiz für Ihre Transaktion hinzu (optional)"],
+            "save": ["Save Transaction", "Transaktion speichern"],
+            "error": ["Please provide description and amount.", "Bitte geben Sie Beschreibung und Betrag an."]
+        }
     }
 }

@@ -54,38 +54,50 @@ exports[`my header component should render correctly when authenticated 1`] = `
         </h1>
       </Link>
       <div
-        className="profile has-dropdown"
+        className="header__nav"
       >
-        <img
-          alt=""
-          className="profile__picture"
-          src="foo.png"
-        />
-        <div
-          className="dropdown-menu"
+        <NavLink
+          activeClassName="header__nav__item--active"
+          ariaCurrent="true"
+          className="header__nav__item"
+          to="/add"
         >
+          transactions.add_transaction
+        </NavLink>
+        <div
+          className="profile has-dropdown"
+        >
+          <img
+            alt=""
+            className="profile__picture"
+            src="foo.png"
+          />
           <div
-            className="dropdown-menu__header"
+            className="dropdown-menu"
           >
-            <strong>
-              user.account
-            </strong>
+            <div
+              className="dropdown-menu__header"
+            >
+              <strong>
+                user.account
+              </strong>
+            </div>
+            <Link
+              className="dropdown-menu__item"
+              replace={false}
+              to="/profile"
+            >
+              user.profile
+            </Link>
+            <Link
+              className="dropdown-menu__item logout"
+              onClick={[Function]}
+              replace={false}
+              to="#"
+            >
+              user.logout
+            </Link>
           </div>
-          <Link
-            className="dropdown-menu__item"
-            replace={false}
-            to="/profile"
-          >
-            user.profile
-          </Link>
-          <Link
-            className="dropdown-menu__item logout"
-            onClick={[Function]}
-            replace={false}
-            to="#"
-          >
-            user.logout
-          </Link>
         </div>
       </div>
     </div>

@@ -23,14 +23,20 @@
     }
 
     &__nav {
-        a {
+        display: flex;
+        align-items: center;
+
+        &__item {
             margin-right: $s-size;
+            padding: $s-size;
             font-size: $font-size-small;
             color: $white;
             text-decoration: none;
+            transition: background .3s ease-in;
 
-            &:hover {
-                color: $dark-grey;
+            &:hover,
+            &--active {
+                background: $green;
             }
         }
     }

@@ -9,6 +9,7 @@ $light-grey:          #cacccd !default;
 $white:               #fff !default;
 $off-white:           #f0f0f0 !default;
 $light-green:         #60a363 !default;
+$green:               darken($light-green, 15%) !default;
 $dark-blue:           #466277 !default;
 $inverted-font-color: $white !default;
 

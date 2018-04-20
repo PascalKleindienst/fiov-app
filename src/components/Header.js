@@ -3,7 +3,7 @@
 // ==============================================
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getTranslate } from 'react-localize-redux';
 import { logout } from '../actions/auth';
@@ -17,18 +17,24 @@ export const Header = ({ auth, isAuthenticated, logout, translate }) => (
                     <Link className="header__title" to="/dashboard">
                         <h1>{ translate('title') }</h1>
                     </Link>
-                    <div className="profile has-dropdown">
-                        <img src={ auth.picture } alt="" className="profile__picture" />
-                        <div className="dropdown-menu">
-                            <div className="dropdown-menu__header">
-                                <strong>{ translate('user.account') }</strong>
+                    <div className="header__nav">
+                        <NavLink to="/add" className="header__nav__item" activeClassName="header__nav__item--active">
+                            { translate('transactions.add_transaction') }
+                        </NavLink>
+                        
+                        <div className="profile has-dropdown">
+                            <img src={ auth.picture } alt="" className="profile__picture" />
+                            <div className="dropdown-menu">
+                                <div className="dropdown-menu__header">
+                                    <strong>{ translate('user.account') }</strong>
+                                </div>
+                                <Link className="dropdown-menu__item" to="/profile">
+                                    { translate('user.profile') }
+                                </Link>
+                                <Link className="dropdown-menu__item logout" onClick={logout} to="#">
+                                    { translate('user.logout') }
+                                </Link>
                             </div>
-                            <Link className="dropdown-menu__item" to="/profile">
-                                { translate('user.profile') }
-                            </Link>
-                            <Link className="dropdown-menu__item logout" onClick={logout} to="#">
-                                { translate('user.logout') }
-                            </Link>
                         </div>
                     </div>
                 </div>

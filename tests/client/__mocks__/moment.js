@@ -1,7 +1,7 @@
 const moment = require.requireActual('moment');
 
-const mockMoment = (timestamp = 0) => {
-    return moment(timestamp);
+const mockMoment = (timestamp = 0, format = 'x') => {
+    return moment(timestamp, format);
 };
 
 mockMoment.locale = (locale) => {

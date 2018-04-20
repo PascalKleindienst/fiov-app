@@ -15,7 +15,7 @@ exports[`my transaction list item component should render correctly 1`] = `
     <span
       className="list-item__sub-title"
     >
-      January 1, 2018
+      January 1, 1970
     </span>
   </div>
   <h3
@@ -41,7 +41,7 @@ exports[`my transaction list item component should render correctly for expenses
     <span
       className="list-item__sub-title"
     >
-      January 1, 2018
+      January 1, 1970
     </span>
   </div>
   <h3

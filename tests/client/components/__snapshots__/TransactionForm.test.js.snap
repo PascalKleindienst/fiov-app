@@ -154,7 +154,7 @@ exports[`my TransactionForm component should render TransactionForm with transac
     calendarInfoPosition="bottom"
     customCloseIcon={null}
     customInputIcon={null}
-    date={"1969-12-31T23:00:00.000Z"}
+    date={"1970-01-01T00:00:01.970Z"}
     daySize={39}
     disableScroll={false}
     disabled={false}

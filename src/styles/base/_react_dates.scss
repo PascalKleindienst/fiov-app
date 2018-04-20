@@ -1,0 +1,47 @@
+// sass-lint:disable class-name-format
+
+// Colors
+.CalendarDay__selected_span {
+    color: $inverted-font-color;
+    background: lighten($light-green, 20%);
+    border-color: $inverted-font-color;
+
+    &:active,
+    &:hover {
+        color: $inverted-font-color;
+        background: lighten($light-green, 10%);
+        border: $inverted-font-color;
+    }
+}
+
+.CalendarDay__selected {
+    background: $light-green;
+
+    &:active,
+    &:hover {
+        background: darken($light-green, 10%);
+    }
+}
+
+.DateInput_input__focused {
+    border-color: $light-green;
+}
+
+.DayPickerKeyboardShortcuts_show__bottomRight {
+    border-right-color: $light-green;
+
+    &:hover {
+        border-right-color: darken($light-green, 10%);
+    }
+}
+
+// Sizes
+.SingleDatePickerInput {
+    &,
+    .DateInput {
+        width: 100%;
+    }
+}
+
+// Fix
+.DateRangePickerInput_arrow_svg { position: relative; }

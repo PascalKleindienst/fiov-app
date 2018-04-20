@@ -1,4 +1,6 @@
 import renderLoadingPage, { authenticatedView } from './bootstrap';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 

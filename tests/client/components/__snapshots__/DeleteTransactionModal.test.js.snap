@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my delete transaction model component should render correctly 1`] = `
+<Modal
+  ariaHideApp={false}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={200}
+  contentLabel="transactions.modal.delete"
+  isOpen={true}
+  onRequestClose={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnEsc={true}
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
+  style={
+    Object {
+      "overlay": Object {
+        "backgroundColor": "rgba(0,0,0,.75)",
+      },
+    }
+  }
+>
+  <h3
+    className="modal__title"
+  >
+    transactions.modal.delete
+  </h3>
+  <p
+    className="modal__body"
+  >
+    transactions.modal.confirm
+  </p>
+  <div
+    className="modal__actions"
+  >
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      transactions.modal.delete
+    </button>
+    <button
+      className="button button--secondary"
+      onClick={[Function]}
+    >
+      cancel
+    </button>
+  </div>
+</Modal>
+`;

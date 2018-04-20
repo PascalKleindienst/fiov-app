@@ -1,0 +1,48 @@
+// ==================================
+// MODAL WINDOW =====================
+// ==================================
+
+.ReactModalPortal { // scss-lint:disable SelectorFormat
+    > div {
+        opacity: 0;
+    }
+
+    .ReactModal__Overlay { // scss-lint:disable SelectorFormat
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity .2s ease-in-out;
+
+        &--after-open {
+            opacity: 1;
+        }
+
+        &--before-close {
+            opacity: 0;
+        }
+    }
+}
+
+.modal {
+    max-width: 60rem;
+    padding: $l-size;
+    color: $grey;
+    text-align: center;
+    background: $off-white;
+    outline: none;
+
+    &__title {
+        margin: 0 0 $m-size;
+    }
+
+    &__body {
+        margin: 0 0 $l-size;
+        font-weight: 300;
+        word-wrap: break-word;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+}

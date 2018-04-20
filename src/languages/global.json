@@ -6,6 +6,8 @@
     "googleLogin": [ "Login with Google", "Login mit Google" ],
     "facebookLogin": [ "Login with Facebook", "Login mit Facebook" ],
 
+    "cancel": ["Cancel", "Abbrechen"],
+
     "user": {
         "account": ["Account", "Konto"],
         "profile": ["Profile", "Profil"],
@@ -31,6 +33,11 @@
             "note": ["Add a note for your transaction (optional)", "Fügen Sie eine Notiz für Ihre Transaktion hinzu (optional)"],
             "save": ["Save Transaction", "Transaktion speichern"],
             "error": ["Please provide description and amount.", "Bitte geben Sie Beschreibung und Betrag an."]
+        },
+
+        "modal": {
+            "delete": ["Delete Transaction", "Transaktion Löschen"],
+            "confirm": ["Are you sure you really want to delete this transaction?", "Sind Sie sicher, dass Sie diese Transaktion wirklich löschen möchten?"]
         }
     }
 }

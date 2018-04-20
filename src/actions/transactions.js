@@ -4,6 +4,29 @@
 import ajax from 'fetchival';
 
 // =============== Add Transaction ===============
+export const ADD_TRANSACTION = 'ADD_TRANSACTION';
+export const addTransaction = (transactionData = {}) => {
+    return (dispatch) => {
+        const {
+            description = '',
+            note = '',
+            amount = 0,
+            createdAt = 0,
+        } = transactionData;
+
+        const transaction = { description, note, amount, createdAt };
+
+        return ajax('/api/transactions', { mode: 'cors', credentials: 'same-origin' }).post(transaction).then((ref) => {
+            dispatch({
+                type: ADD_TRANSACTION,
+                transaction: {
+                    id: ref.id,
+                    ...transaction
+                }
+            });
+        });
+    };
+};
 
 // =============== Remove Transaction ===============
 

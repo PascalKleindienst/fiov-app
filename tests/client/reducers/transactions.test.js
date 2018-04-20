@@ -2,7 +2,7 @@
 // TRANSACTIONS REDUCER TEST ====================
 // ==============================================
 import transactionsReducer from '../../../src/reducers/transactions';
-import { SET_TRANSACTIONS } from '../../../src/actions/transactions';
+import { SET_TRANSACTIONS, ADD_TRANSACTION } from '../../../src/actions/transactions';
 import transactions from '../fixtures/transactions';
 
 describe('my transactions reducer', () => {
@@ -19,5 +19,15 @@ describe('my transactions reducer', () => {
     
         const state = transactionsReducer(transactions, action);
         expect(state).toEqual([transactions[1]]);
+    });
+
+    test('should add transaction', () => {
+        const action = {
+            type: ADD_TRANSACTION,
+            transaction: transactions[2]
+        };
+    
+        const state = transactionsReducer(transactions[2], action);
+        expect(state).toEqual([transactions[2]]);
     });
 });

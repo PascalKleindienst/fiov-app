@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my AddTransactionPage component should render correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h2
+        className="page-header__title"
+      >
+        transactions.add_transaction
+      </h2>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <Connect(TransactionForm)
+      onSubmit={[Function]}
+    />
+  </div>
+</div>
+`;

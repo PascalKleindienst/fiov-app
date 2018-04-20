@@ -18,10 +18,10 @@ module.exports.list_all_transactions = (req, res) => {
 
 // Create a new transaction for the current user.
 module.exports.create_transaction = (req, res) => {
-    const { description = '', note = '', amount = 0 } = req.body;
+    const { description = '', note = '', amount = 0, createdAt = null } = req.body;
 
     req.app.locals.models.Transactions
-        .create({ description, note, amount, user_id: req.user.id })
+        .create({ description, note, amount, createdAt, user_id: req.user.id })
         .then((transaction) => {
             res.json(transaction.get());
         })

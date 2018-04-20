@@ -23,6 +23,7 @@ exports[`my header component should render correctly when NOT authenticated 1`] 
         className="header__nav"
       >
         <Link
+          className="header__nav__item"
           replace={false}
           to="/login"
         >

@@ -44,7 +44,7 @@ export const Header = ({ auth, isAuthenticated, logout, translate }) => (
                         <h1>{ translate('title') }</h1>
                     </Link>
                     <div className="header__nav">
-                        <Link to="/login">{ translate('menu.login') }</Link>
+                        <Link to="/login" className="header__nav__item">{ translate('menu.login') }</Link>
                     </div>
                 </div>
             )}

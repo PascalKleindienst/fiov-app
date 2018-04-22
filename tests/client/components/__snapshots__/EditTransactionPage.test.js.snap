@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my EditTransactionPage component should render EditTransactionPage correctly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h2
+        className="page-header__title"
+      >
+        transactions.edit_transaction
+      </h2>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <Connect(TransactionForm)
+      onSubmit={[Function]}
+      transaction={
+        Object {
+          "amount": -109500,
+          "createdAt": "1969 12 28",
+          "description": "Rent",
+          "id": 2,
+          "note": "",
+        }
+      }
+    />
+    <button
+      className="button button--secondary button--remove"
+      onClick={[Function]}
+    >
+      transactions.remove_transaction
+    </button>
+  </div>
+  <Connect(DeleteTransactionModal)
+    handleClose={[Function]}
+    handleConfirmation={[Function]}
+    isOpen={false}
+  />
+</div>
+`;

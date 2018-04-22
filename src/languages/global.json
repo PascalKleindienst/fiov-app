@@ -26,6 +26,8 @@
         "amount": ["Amount", "Betrag"],
         "no_transactions": ["No Transactions available", "Keine Transaktionen vorhanden"],
         "add_transaction": ["Add Transaction", "Transaktion Hinzufügen"],
+        "edit_transaction": ["Edit Transaction", "Transaktion Bearbeiten"],
+        "remove_transaction": ["Remove Transaction", "Transaktion Löschen"],
 
         "form": {
             "description": ["Description", "Beschreibung"],

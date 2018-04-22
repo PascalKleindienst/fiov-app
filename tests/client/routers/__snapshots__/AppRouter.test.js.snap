@@ -41,6 +41,10 @@ exports[`my AppRouter should render correctly 1`] = `
       component={[Function]}
       path="/add"
     />
+    <Connect(PrivateRoute)
+      component={[Function]}
+      path="/edit/:id"
+    />
     <Route
       component={[Function]}
     />

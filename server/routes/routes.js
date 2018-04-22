@@ -12,6 +12,9 @@ module.exports = (app, publicPath) => {
     app.route('/api/transactions')
         .get(TransactionsController.list_all_transactions)
         .post(TransactionsController.create_transaction);
+    app.route('/api/transactions/:id')
+        .patch(TransactionsController.update_transaction)
+        .delete(TransactionsController.delete_transaction);
 
     app.get('*', (req, res) => {
         res.sendFile(path.join(publicPath, 'index.html'));

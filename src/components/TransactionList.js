@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getTranslate } from 'react-localize-redux';
 import TransactionListItem from './TransactionListItem';
+import selectTransactions from '../selectors/transactions';
 
 export const TransactionList = ({ transactions, translate }) => (
     <div className="content-container">
@@ -36,7 +37,7 @@ TransactionList.propTypes = {
 
 // States
 const mapStateToProps = (state) => ({
-    transactions: state.transactions,
+    transactions: selectTransactions(state.transactions, state.filters),
     translate: getTranslate(state.locale)
 });
 

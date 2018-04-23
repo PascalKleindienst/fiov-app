@@ -14,6 +14,7 @@ describe('my transaction list component', () => {
     test('should contain transactions', () => {
         const store = mockStore({
             locale: { languages: ['en'] },
+            filters: { text: '', sortBy: '', startDate: undefined, endDate: undefined },
             transactions: transactions
         });
         const wrapper = shallow(<TransactionListContainer store={store} />);

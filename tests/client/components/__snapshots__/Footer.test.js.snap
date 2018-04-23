@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my footer page component should render correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="footer__content"
+    >
+      <Link
+        replace={false}
+        to="/imprint"
+      >
+        menu.imprint
+      </Link>
+      <Link
+        replace={false}
+        to="/privacy"
+      >
+        menu.privacy
+      </Link>
+      <span
+        className="scroll-top"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</footer>
+`;

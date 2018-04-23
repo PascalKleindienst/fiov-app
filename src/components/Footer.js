@@ -6,15 +6,16 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { localize } from 'react-localize-redux';
 
-const smoothscroll = () => {
+export const smoothscroll = () => {
     const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    
     if (currentScroll > 0) {
         window.requestAnimationFrame(smoothscroll);
         window.scrollTo(0,currentScroll - (currentScroll/5));
     }
 };
 
-const Footer = ({ translate }) => (
+export const Footer = ({ translate }) => (
     <footer className="footer">
         <div className="content-container">
             <div className="footer__content">

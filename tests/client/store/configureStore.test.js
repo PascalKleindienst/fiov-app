@@ -21,4 +21,8 @@ describe('my store', () => {
     test('should contain transactions reducer', () => {
         expect(store.getState()).toHaveProperty('transactions');
     });
+
+    test('should contain filters reducer', () => {
+        expect(store.getState()).toHaveProperty('filters');
+    });
 });

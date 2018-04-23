@@ -6,6 +6,7 @@ import thunk from 'redux-thunk';
 import { localeReducer } from 'react-localize-redux';
 import authReducer from '../reducers/auth';
 import transactionsReducer from '../reducers/transactions';
+import filtersReducer from '../reducers/filters';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -15,7 +16,8 @@ export default () => {
         combineReducers({
             locale: localeReducer,
             auth: authReducer,
-            transactions: transactionsReducer
+            transactions: transactionsReducer,
+            filters: filtersReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );

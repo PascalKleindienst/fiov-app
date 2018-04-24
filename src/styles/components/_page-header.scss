@@ -11,7 +11,10 @@
         margin: 0;
         font-weight: 300;
 
-        span { font-weight: bold; }
+        em {
+            font-weight: bold;
+            font-style: normal;
+        }
     }
 
     &__actions {

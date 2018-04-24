@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`my transaction summary component should render component with 1 filtered transaction correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      transactions.total
+      <p>
+        transactions.not_visible_filter
+      </p>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/add"
+      >
+        transactions.add_transaction
+      </Link>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`my transaction summary component should render component with 1 transaction correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      transactions.total
+      <p>
+        transactions.not_filtered
+      </p>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/add"
+      >
+        transactions.add_transaction
+      </Link>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`my transaction summary component should render component with multiple transactions correctly 1`] = `
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h2
+      className="page-header__title"
+    >
+      transactions.total
+      <p>
+        transactions.not_filtered
+      </p>
+    </h2>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        replace={false}
+        to="/add"
+      >
+        transactions.add_transaction
+      </Link>
+    </div>
+  </div>
+</div>
+`;

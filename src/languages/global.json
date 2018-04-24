@@ -29,6 +29,9 @@
         "add_transaction": ["Add Transaction", "Transaktion Hinzufügen"],
         "edit_transaction": ["Edit Transaction", "Transaktion Bearbeiten"],
         "remove_transaction": ["Remove Transaction", "Transaktion Löschen"],
+        "total": ["Viewing <em>${ count }</em> transactions totalling <em>${ amount }</em>", "Anzeigen von <em>${ count }</em> Transaktionen mit insgesamt <em>${ amount }</em>"],
+        "not_visible_filter": ["<small>Not Showing <em>${ count }</em> transactions because of active filters</small>", "<small>Zeigt <em>${ count }</em> Transaktionen wegen aktiver Filter nicht an</small>"],
+        "not_filtered": ["<small>Showing all transactions - no filters in place", "<small>Alle Transaktionen - keine Filter vorhanden</small>"],
 
         "form": {
             "description": ["Description", "Beschreibung"],
